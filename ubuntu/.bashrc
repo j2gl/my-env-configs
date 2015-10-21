@@ -112,3 +112,11 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bash_profile if it exists
+    if [ -f "$HOME/.bash_profile" ]; then
+	     source "$HOME/.bash_profile"
+    fi
+fi
