@@ -34,7 +34,7 @@ fi
 # brew bash_completion
 #---------------------------------------
 if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
+    source `brew --prefix`/etc/bash_completion
 fi
 
 # Custom bash prompt via http://kirsle.net/wizards/ps1.html
