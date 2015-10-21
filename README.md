@@ -19,3 +19,4 @@ $ brew install bash-completion
 ## Other Credits
 * Some ideas taken from: https://github.com/mathiasbynens/dotfiles
 * Custom bash prompt via: http://kirsle.net/wizards/ps1.html
+
