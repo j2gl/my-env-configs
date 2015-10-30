@@ -18,6 +18,12 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+#---------------------------------------
+# Load jenv autocompletion
+#---------------------------------------
+eval "$(jenv init -)"
+
 #---------------------------------------
 # Git autocompletion
 #---------------------------------------
