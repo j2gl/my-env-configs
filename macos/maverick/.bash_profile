@@ -20,6 +20,11 @@ alias localip="ipconfig getifaddr en0"
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 #---------------------------------------
+# Load jenv autocompletion
+#---------------------------------------
+eval "$(jenv init -)"
+
+#---------------------------------------
 # Git autocompletion
 #---------------------------------------
 if [ -f  /usr/local/git/contrib/completion/git-completion.bash ]; then
