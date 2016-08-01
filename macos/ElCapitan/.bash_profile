@@ -7,7 +7,7 @@ export LSCOLORS="gxdxBxDxCxEgEdxbxgxcxd"
 
 # Environment variables
 export GIT_PS1_SHOWDIRTYSTATE=true
-export ANT_HOME="/usr/local/Cellar/ant/1.9.6/libexec"
+export ANT_HOME="/usr/local/Cellar/ant/1.9.7/libexec"
 export PATH="$ANT_HOME/bin:$PATH"
 
 #---------------------------------------
