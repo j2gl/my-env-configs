@@ -14,7 +14,7 @@ brew install git
 ```
 2. Install bash completion.
 ```sh
-brew install bash_completion
+brew install bash-completion
 ```
 3. Install jenv
 ```sh
@@ -36,7 +36,7 @@ Git prompt allows you to show a lot of useful information about a git repository
 Example:
 ```sh
 ✔ ~/path/to/git-repo [feature/branch|✔]
-user@host $ 
+user@host $
 
 ✔ ~/projects/my-env-configs [develop|✚ 1]
 user@host $
