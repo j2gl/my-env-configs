@@ -11,11 +11,8 @@ export PATH="/usr/local/bin:$PATH"
 
 # Custom bash prompt via http://kirsle.net/wizards/ps1.html
 export PS1='\[$(tput setaf 2)\]\u@\h\[$(tput sgr0)\]:\[$(tput setaf 6)\]\w\[$(tput sgr0)\] $ \[$(tput sgr0)\]'
- export MAVEN_OPTS="-Xms1G -Xmx1536m -XX:PermSize=1024m -noverify"
+export MAVEN_OPTS="-Xms1G -Xmx1536m -XX:PermSize=1024m -noverify"
 
-#if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
-
-#fi
 #---------------------------------------
 # Aliases
 #---------------------------------------
@@ -32,10 +29,15 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 #---------------------------------------
-# Load jenv autocompletion
+# Load jenv
 #---------------------------------------
 eval "$(jenv init -)"
 
+# ------------------------------------------------
+# Set JAVA_HOME with the version provided by jenv
+# ------------------------------------------------
+export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
+alias jenv_set_java_home='export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"'
 
 BREW_PREFIX=`brew --prefix`
 #---------------------------------------
