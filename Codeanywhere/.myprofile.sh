@@ -10,3 +10,6 @@ source /usr/share/bash-completion/completions/git
 GIT_PROMPT_THEME=Single_line_Dark
 GIT_PROMPT_ONLY_IN_REPO=1
 source ~/.bash-git-prompt/gitprompt.sh
+
+# Add agent
+eval `ssh-agent -s`
