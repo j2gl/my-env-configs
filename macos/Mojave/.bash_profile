@@ -31,7 +31,7 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 # Docker
-alias ps-docker="docker ps --format 'table {{.Names}}\t{{.Image}}'"
+alias ps-docker="docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.RunningFor}} ago\t{{.Status}}\t{{.Command}}'"
 
 #---------------------------------------
 # Load jenv
