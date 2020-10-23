@@ -25,21 +25,26 @@ SAVEHIST=5000
 HISTSIZE=2000
 HISTCONTROL=ignorespace  # prevents commands starting with space from being added to history
 
-#---------------------------------------
-# Prompt
-#---------------------------------------
-PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{blue}%~%f%b %# '
 
 #---------------------------------------
 # Git Propmpt
 #---------------------------------------
 autoload -Uz vcs_info
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
+
+precmd() { vcs_info }
 setopt prompt_subst
-RPROMPT=\$vcs_info_msg_0_
-zstyle ':vcs_info:git:*' formats '%F{240}(%b)%r%f'
+
 zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '!'
+zstyle ':vcs_info:*' stagedstr '+'
+zstyle ':vcs_info:*' formats "%u%c"
+zstyle ':vcs_info:git*' formats "(%b)%m%u%c "
+
+#---------------------------------------
+# Prompt
+#---------------------------------------
+PS1='%(?.%F{green}√.%F{red}?%?)%f %B%F{blue}%~%f%b ${vcs_info_msg_0_}%# '
 
 #---------------------------------------
 # Aliases
