@@ -1,6 +1,6 @@
-# README Monterrey
+# README Monterey
 
-Monterrey Version 12.x.x
+Monterey Version 12.x.x
 
 ## Setup
 
