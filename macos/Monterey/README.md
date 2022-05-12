@@ -74,3 +74,13 @@ brew install --cask postman
 ```sh
 brew install --cask imageoptim
 ```
+
+### Official Amazon AWS command-line interface
+```sh
+brew install awscli
+```
+
+### jq commandline JSON processor
+```sh
+brew install jq
+```
