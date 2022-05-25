@@ -84,3 +84,12 @@ brew install awscli
 ```sh
 brew install jq
 ```
+### kafkacat - kcat
+```sh
+brew install kcat
+```
+
+### Postgres Library
+```sh
+brew install libpq
+```
