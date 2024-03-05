@@ -1,0 +1,26 @@
+[alias]
+	lg = log --no-show-signature --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	ll = log --no-show-signature --pretty=format:%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn] --decorate --numstat
+	ld = log --no-show-signature --pretty=format:%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn] --decorate --date=short --graph
+	ls = log --no-show-signature --pretty=format:%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn] --decorate --date=relative
+
+[user]
+	name = Juan J. Garcia
+	email = 3269677+j2gl@users.noreply.github.com
+	signingkey = 9C6DAA40A4F015C0
+
+[init]
+	defaultBranch = master
+
+[core]
+	sshCommand = "ssh -i ~/.ssh/id_juanjo-gmail"
+	pager = less -FRX
+
+[pull]
+	rebase = false
+
+[commit]
+	gpgsign = true
+
+[log]
+	showSignature = true
