@@ -87,6 +87,16 @@ list
 save
 ```
 
+##  Install gpg suite
+This is for having a keyring of gpg, and visual tools.
+
+* https://gpgtools.org/
+
+```sh
+brew install --cask gpg-suite
+```
+
+
 ## Importing Github General GPG KEY
 
 https://github.com/web-flow.gpg
