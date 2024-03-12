@@ -22,15 +22,38 @@ sub   cv25519 2024-03-05 [E] [expires: 2027-03-05]
 git config --global user.signingkey 9C6DAA40A4F015C0
 ```
 
+## GPG and GIT
 
-# GPG 
 
-## Generate a Kay
+If you get this message:
+```
+git commit -m "My commit message"
+error: unknown switch `m'
+usage: git version [--build-options]
+```
+
+Try first 
+```sh
+# To kill the daemon
+gpgconf --kill all
+
+# To ask for the key passwor try to do a signing test
+gpg --sign --armor --detach-sig --default-key 9C6DAA40A4F015C0 input.txt
+
+
+# To test the signature
+gpg --decrypt input.txt.asc
+```
+
+
+## GPG 
+
+### Generate a Kay
 ```
 gpg --gen-key
 ```
 
-## list Keys
+### list Keys
 ```
 gpg --list-keys
 
@@ -41,43 +64,43 @@ gpg --list-secret-keys --keyid-format short
 gpg --list-secret-keys --keyid-format long
 ```
 
-## Delete Key
+### Delete Key
 ```
 gpg --delete-secret-keys 1C72EDE30DBA2234
 ```
 
-### 1. Export with private key
+#### 1. Export with private key
 ```
 gpg --export-secret-keys --armor E8759840F4FBF904359305791C72EDE30DBA2234 > ./juanjo-gpg-key.asc
 
 
 ```
-### 2. Export public part
+#### 2. Export public part
 ```
 gpg --armor --export E8759840F4FBF904359305791C72EDE30DBA2234
 ```
 
-## Import
+### Import
 ```
 gpg --import ./juanjo-gpg-key.asc
 ```
 
-## sign
+### sign
 ```
 gpg --sign message.txt
 gpg --decrypt message.txt.asc
 ```
 
-## detached sign
+### detached sign
 ```
 gpg --detach-sign message.txt
 ```
-## verify signature
+### verify signature
 ```
 gpg --verify some_signature.sig ./message.txt
 ```
 
-## Editing a Key
+### Editing a Key
 ```
 gpg --edit-key 9C6DAA40A4F015C0
 
