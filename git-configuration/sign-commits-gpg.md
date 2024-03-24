@@ -19,7 +19,10 @@ uid           [ultimate] Juan J. Garcia <juanjo.garcia@gmail.com>
 sub   cv25519 2024-03-05 [E] [expires: 2027-03-05]
 
 
+gpg --list-secret-keys --keyid-format long
+
 git config --global user.signingkey 9C6DAA40A4F015C0
+git config --global user.signingkey 2C41843BFBD92A71
 ```
 
 ## GPG and GIT
@@ -38,7 +41,7 @@ Try first
 gpgconf --kill all
 
 # To ask for the key passwor try to do a signing test
-gpg --sign --armor --detach-sig --default-key 9C6DAA40A4F015C0 input.txt
+gpg --sign --armor --detach-sig --default-key 2C41843BFBD92A71 input.txt
 
 
 # To test the signature
