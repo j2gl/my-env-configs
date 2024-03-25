@@ -54,9 +54,12 @@ use-agent
 
 2.- Add or edit: `~/.gnupg/gpg-agent.conf`
 ```
-default-cache-ttl 600
-max-cache-ttl 600
-# if pinentry-mac is is intalled
+# 28,800 sec = 8 hours
+default-cache-ttl 28800
+max-cache-ttl 345600
+default-cache-ttl-ssh 28800
+max-cache-ttl-ssh 345600
+# if pinentry-mac is is intalled via homebrew
 pinentry-program /opt/homebrew/bin/pinentry-mac
 ```
 
