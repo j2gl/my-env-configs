@@ -31,7 +31,7 @@ Try first
 # To kill the daemon
 gpgconf --kill all
 
-# To ask for the key passwor try to do a signing test
+# To ask for the key password, try to do a signing test
 echo 'it works' | gpg --clearsign
 gpg --sign --armor --detach-sig --default-key 2C41843BFBD92A71 input.txt
 
