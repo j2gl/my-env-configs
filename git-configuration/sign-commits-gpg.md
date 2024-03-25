@@ -4,20 +4,12 @@
 ```sh
 brew install gpg
 
+# Optinal
+brew install pinentry-mac
+
+
 
 gpg --gen-key
-
-gpg: checking the trustdb
-gpg: marginals needed: 3  completes needed: 1  trust model: pgp
-gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
-gpg: next trustdb check due at 2027-03-05
-[keyboxd]
----------
-pub   ed25519 2024-03-05 [SC] [expires: 2027-03-05]
-      E8759840F4FBF904359305791C72EDE30DBA2234
-uid           [ultimate] Juan J. Garcia <juanjo.garcia@gmail.com>
-sub   cv25519 2024-03-05 [E] [expires: 2027-03-05]
-
 
 gpg --list-secret-keys --keyid-format long
 
@@ -26,7 +18,6 @@ git config --global user.signingkey 2C41843BFBD92A71
 ```
 
 ## GPG and GIT
-
 
 If you get this message:
 ```
@@ -41,6 +32,7 @@ Try first
 gpgconf --kill all
 
 # To ask for the key passwor try to do a signing test
+echo 'it works' | gpg --clearsign
 gpg --sign --armor --detach-sig --default-key 2C41843BFBD92A71 input.txt
 
 
@@ -48,6 +40,53 @@ gpg --sign --armor --detach-sig --default-key 2C41843BFBD92A71 input.txt
 gpg --decrypt input.txt.asc
 ```
 
+## Signing git commits and gpg password 
+
+```sh
+mkdir ~/.gnupg
+touch ~/.gnupg/gpg.conf ~/.gnupg/gpg-agent.conf
+```
+
+1.- Add or edit: `~/.gnupg/gpg.conf`
+```
+use-agent
+```
+
+2.- Add or edit: `~/.gnupg/gpg-agent.conf`
+```
+default-cache-ttl 600
+max-cache-ttl 600
+# if pinentry-mac is is intalled
+pinentry-program /opt/homebrew/bin/pinentry-mac
+```
+
+4.- Add this to the `~/.zshrc`
+```
+# gpg agent
+export GPG_TTY=$(tty)
+gpgconf --launch gpg-agent
+```
+
+3.- Reload Agent
+```sh	
+echo "RELOADAGENT" | gpg-connect-agent
+```
+
+Sources 
+* Signing git commits [signing-git-commits.md](https://gist.github.com/phortuin/cf24b1cca3258720c71ad42977e1ba57)
+* MichD [blog](https://michd.me/jottings/gpg-sign-git-commits-without-gui/)
+
+
+## Troubleshooting
+
+If you get this error when signing data
+
+```
+error: gpg failed to sign the data
+fatal: failed to write commit object
+```
+
+If the password entry prompt does not appear, add export `GPG_TTY=$(tty)` to your shell’s rc.
 
 ## GPG 
 
