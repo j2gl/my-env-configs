@@ -80,6 +80,26 @@ Sources
 * MichD [blog](https://michd.me/jottings/gpg-sign-git-commits-without-gui/)
 
 
+### Checking current signature
+
+
+Check the email to commit: `$ git config --get user.email`
+
+```
+$ git config --get user.signingkey
+AE0A92EFBACF6F13E73521F72C41843BFBD92A71
+```
+
+```
+$ gpg --list-keys AE0A92EFBACF6F13E73521F72C41843BFBD92A71`
+pub   ed25519 2024-03-22 [SC] [expires: 2027-03-22]
+      AE0A92EFBACF6F13E73521F72C41843BFBD92A71
+uid           [ unknown] Juan J. Garcia <*******@gmail.com>
+sub   cv25519 2024-03-22 [E] [expires: 2027-03-22]
+```
+
+**Important**: Always check `user.email` matches the email in the `user.signingkey`
+
 ## Troubleshooting
 
 If you get this error when signing data
@@ -120,9 +140,28 @@ gpg --export-secret-keys --armor E8759840F4FBF904359305791C72EDE30DBA2234 > ./ju
 
 
 ```
-#### 2. Export public part
-```
+#### 2. Export only public part
+```sh
 gpg --armor --export E8759840F4FBF904359305791C72EDE30DBA2234
+gpg --armor --export 4FEFBEFA03CA3A321512C5969C6DAA40A4F015C0
+```
+
+Example:
+```sh
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEZec7YBYJKwYBBAHaRw8BAQdA8LMtUu5SRsKyDRrXdvISU1ZJhhf/u0UPvw28
+9xPLCTe0OWoyZ2wgKEdJVEhVQi1LRVkpIDwzMjY5Njc3K2oyZ2xAdXNlcnMubm9y
+ZXBseS5naXRodWIuY29tPoiZBBMWCgBBFiEET++++gPKOjIVEsWWnG2qQKTwFcAF
+AmXnTKwCGwMFCQWjmoAFCwkIBwICIgIGFQoJCAsCBBYCAwECHgcCF4AACgkQnG2q
+QKTwFcA9iQEA0RxvvRw2/O7olln8rXUAwlMOFnE7Yhlu1vZH1QrefqABAOd/Uaqn
+uUrVpI619de04AYJ8QDBTdFTNf0nPzeVmIsLuDgEZec7YBIKKwYBBAGXVQEFAQEH
+QNxM18ix82i8o4bqIuuWWgQbKSgy1KNMRRVZriwohlIHAwEIB4h+BBgWCgAmFiEE
+T++++gPKOjIVEsWWnG2qQKTwFcAFAmXnO2ACGwwFCQWjmoAACgkQnG2qQKTwFcCY
+fQEA92u0X4whVyYrw3O7p5aOnRut92nQQ7oWQEZkJrfXDzMA/0APEBfFUzKbnDF0
+HWQaYQjhgS0lmH1rvt3RvSr+l9oM
+=oCSH
+-----END PGP PUBLIC KEY BLOCK-----
 ```
 
 ### Import
