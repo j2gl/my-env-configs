@@ -94,7 +94,7 @@ AE0A92EFBACF6F13E73521F72C41843BFBD92A71
 $ gpg --list-keys AE0A92EFBACF6F13E73521F72C41843BFBD92A71`
 pub   ed25519 2024-03-22 [SC] [expires: 2027-03-22]
       AE0A92EFBACF6F13E73521F72C41843BFBD92A71
-uid           [ unknown] Juan J. Garcia <*******@gmail.com>
+uid           [ unknown] Juan J. Garcia <******@*****.***>
 sub   cv25519 2024-03-22 [E] [expires: 2027-03-22]
 ```
 

@@ -2,8 +2,25 @@
 
 How to have a different specific configuration for a folder.
 
+## GPG Signing
+
+Install GPG
+```sh
+brew install gpg
+```
+
+Configure Git to use keys
+
+```sh
+git config --local user.email ******@*****.***
+git config --local user.name j2gl
+git config --local user.signingkey AE0A92EFBACF6F13E73521F72C41843BFBD92A71
+git config --local commit.gpgsign true
+```
 
 ## ssh config
+
+Multiple git accounts in same computer.
 
 Add keys to ssh-agent and keystore (`-K`):
 ```sh
