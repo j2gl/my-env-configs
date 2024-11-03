@@ -29,6 +29,11 @@ brew install --cask whatsapp
 brew install --cask intellij-idea
 brew install --cask nordvpn
 brew install --cask gpg-suite
+brew install --cask keepassxc
+brew install --cask devtoys
+brew install --cask spotify
+brew install --cask gimp
+brew install --cask imageoptim
 ```
 
 Command Line
@@ -36,6 +41,9 @@ Command Line
 brew install git
 brew install maven
 brew install gpg
+brew install pinentry-mac
+brew install mysql-client
+brew install gradle
 ```
 
 ## ohmyzsh
@@ -90,7 +98,7 @@ pinentry-program /opt/homebrew/bin/pinentry-mac
 
 3. Fix zsh scripts
 
-Add this [file](./j2gl.zsh) to `$ZSH_CUSTOM/j2gl.zsh`
+Add this [file](./j2gl.zsh) to `$ZSH_CUSTOM/j2gl.zsh` or `~/.oh-my-zsh/custom/j2gl.zsh`
 
 
 ```sh
