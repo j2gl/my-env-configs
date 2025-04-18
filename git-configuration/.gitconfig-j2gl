@@ -6,8 +6,8 @@
 
 [user]
 	name = j2gl
-	email = 3269677+j2gl@users.noreply.github.com
-	signingkey = 4FEFBEFA03CA3A321512C5969C6DAA40A4F015C0
+	email = j2gl.dev@gmail.com
+	signingkey = AE0A92EFBACF6F13E73521F72C41843BFBD92A71
 
 [init]
 	defaultBranch = master
