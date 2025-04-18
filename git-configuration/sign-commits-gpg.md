@@ -129,10 +129,44 @@ gpg --list-secret-keys --keyid-format short
 gpg --list-secret-keys --keyid-format long
 ```
 
-### Delete Key
+### Sign a Key
+Sometimes we need to sign a key to be trusted.  To do so:
+
+```sh
+gpg --default-key="E8759840F4FBF904359305791C72EDE30DBA2234" --sign-key "AE0A92EFBACF6F13E73521F72C41843BFBD92A71"
+gpg --default-key="E8759840F4FBF904359305791C72EDE30DBA2234" --sign-key "4FEFBEFA03CA3A321512C5969C6DAA40A4F015C0"
+gpg --default-key="[KEY ID USED TO SING]" --sign-key "[KEY ID TO SIGN]"
 ```
+
+### Trust a Key
+
+```sh
+gpg --edit-key "[KEY ID]"
+gpg --edit-key E8759840F4FBF904359305791C72EDE30DBA2234
+```
+* Type `trust` to trust.
+```
+Please decide how far you trust this user to correctly verify other users' keys
+(by looking at passports, checking fingerprints from different sources, etc.)
+
+  1 = I don't know or won't say
+  2 = I do NOT trust
+  3 = I trust marginally
+  4 = I trust fully
+  5 = I trust ultimately
+  m = back to the main menu
+
+Your decision? 5
+```
+* Choose the level.
+* Type `quit` to exit.
+
+
+### Delete Key
+```sh
 gpg --delete-secret-keys 1C72EDE30DBA2234
 ```
+
 
 #### 1. Export with private key
 ```
