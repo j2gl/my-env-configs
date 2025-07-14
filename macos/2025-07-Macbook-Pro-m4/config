@@ -1,0 +1,11 @@
+# Default github account
+Host github.com
+    HostName github.com
+    IdentifyFile ~/.ssh/id_juanjo-pliant
+    IdentitiesOnly yes
+
+#  j2gl github account
+Host j2gl.github.com
+    HostName github.com
+    IdentifyFile ~/.ssh/id_juanjo-gmail.com
+    identitiesOnly yes
