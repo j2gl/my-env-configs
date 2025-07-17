@@ -18,6 +18,8 @@
 # export GPG_TTY=$(tty)
 # gpgconf --launch gpg-agent
 
+export PATH="$HOME/dev/devtools/bin:$HOME/dev/devtools-aws/bin:$PATH"
+
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

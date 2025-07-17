@@ -29,6 +29,7 @@ brew install --cask docker
 
 ```sh
 brew install awscli
+brew install libpq
 ```
 
 
@@ -100,6 +101,7 @@ brew install --cask intellij-idea
 ```sh
 brew install --cask bitwarden
 brew install --cask chatgpt
+brew install --cask drawio
 brew install --cask dbeaver-community
 brew install --cask gpg-suite
 brew install --cask notion
@@ -134,7 +136,8 @@ brew install tmux
 1. Install Oh My Zsh [website](https://ohmyz.sh/) - [github](https://github.com/ohmyzsh/ohmyzsh)
 2. Add the theme [juanjo.zsh-theme](/prompt-zsh-theme/juanjo.zsh-theme) in `~/.oh-my-zsh/themes`
 3. Edit `~/.zshrc` and set `ZSH_THEME="juanjo"`
-4. copy [j2gl.zsh](/macos/2025-07-Macbook-Pro-m4/config-files/j2gl.zsh) to the custom OhMyZsh directory ~/.oh-my-zsh/custom.  `cp macos/2025-07-Macbook-Pro-m4/config-files/j2gl.zsh ~/.oh-my-zsh/custom`
+4. copy [j2gl.zsh](/macos/2025-07-Macbook-Pro-m4/config-files/j2gl.zsh) to the custom OhMyZsh directory ~/.oh-my-zsh/custom.  
+    `cp macos/2025-07-Macbook-Pro-m4/config-files/j2gl.zsh ~/.oh-my-zsh/custom`
 
 ### Compleation
 * For brew completion need to run:
