@@ -35,17 +35,21 @@ brew install libpq
 
 ## GitHub
 
-Create ssh key for github (personal)
-call it `id_juanjo-gmail-m4`
+### Create ssh key for github
 
-it will be on `~/.ssh/id_juanjo-gmail-m4`
+Create ssh keys for github
+
+call it `id_juanjo-gmail`
+it will be on `~/.ssh/id_juanjo-gmail`
 
 ```sh
 ssh-keygen -t ed25519 -C "juanjo.garcia@gmail.com"
-cat ~/.ssh/id_juanjo-gmail-m4.pub
+cat ~/.ssh/id_juanjo-gmail.pub
 ```
 
-Paste the public part in GitHub in settings -> SSH and GPG Keys and call it §Juanjo M4§
+Same for `id_juanjo-pliant` and will also create the public part `id_juanjo-pliant.pub`.
+
+Paste the public part in GitHub in settings -> SSH and GPG Keys and call it `Juanjo M4`
 
 
 ## Stream Camera Logitech
