@@ -100,6 +100,11 @@ pinentry-program /opt/homebrew/bin/pinentry-mac
 
 Add this [file](./j2gl.zsh) to `$ZSH_CUSTOM/j2gl.zsh` or `~/.oh-my-zsh/custom/j2gl.zsh`
 
+e.g.:
+```sh
+cp macos/2025-07-Macbook-Pro-m4/config-files/j2gl.zsh $ZSH_CUSTOM/j2gl.zsh
+```
+
 
 ```sh
 git config --global user.email ******@*****.***

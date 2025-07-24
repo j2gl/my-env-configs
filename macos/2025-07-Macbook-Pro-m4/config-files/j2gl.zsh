@@ -18,8 +18,11 @@
 # export GPG_TTY=$(tty)
 # gpgconf --launch gpg-agent
 
-export PATH="$HOME/dev/devtools/bin:$HOME/dev/devtools-aws/bin:$PATH"
+export PATH="/opt/homebrew/opt/libpq/bin:$HOME/dev/devtools/bin:$HOME/dev/devtools-aws/bin:$PATH"
 
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# TO copy to the correct location use;
+# cp macos/2025-07-Macbook-Pro-m4/config-files/j2gl.zsh $ZSH_CUSTOM/j2gl.zsh
