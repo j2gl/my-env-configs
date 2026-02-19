@@ -21,6 +21,7 @@
 export GPG_TTY=$(tty)
 gpgconf --launch gpg-agent
 
+export PAGER="bat"
 export DEVTOOLS_PROJECT_ROOT=~/dev/devtools
 export PATH="/opt/homebrew/opt/libpq/bin:$HOME/dev/devtools/dist:$HOME/dev/devtools-aws/bin:$PATH"
 
