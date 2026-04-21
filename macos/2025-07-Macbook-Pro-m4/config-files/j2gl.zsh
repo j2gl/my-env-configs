@@ -22,8 +22,8 @@ export GPG_TTY=$(tty)
 gpgconf --launch gpg-agent
 
 export PAGER="bat"
-export DEVTOOLS_PROJECT_ROOT=~/dev/devtools
-export PATH="/opt/homebrew/opt/libpq/bin:$HOME/dev/devtools/dist:$HOME/dev/devtools-aws/bin:$PATH"
+export DEVTOOLS_HOME=~/dev/devtools
+export PATH="/opt/homebrew/opt/libpq/bin:$DEVTOOLS_HOME/dist:$HOME/dev/devtools-aws/bin:$HOME/go/go-1.25.2/bin:$PATH"
 
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
