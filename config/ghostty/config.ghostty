@@ -1,0 +1,8 @@
+theme = iTerm2 Pastel Dark Background
+# theme = Dracula
+
+font-family = JetBrains Mono
+split-divider-color = #1c4329
+
+# toggle_quick_terminal (This uses Ctrl + ~).
+#keybind = global:ctrl+grave_accent=toggle_quick_terminal
